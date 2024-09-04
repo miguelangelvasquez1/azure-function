@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 20px auto;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 20px;
+            border-radius: 10px 10px 0 0;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border-bottom: 1px solid #e1e1e1;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        .item img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            width: 400px; /* Ajusta el ancho máximo de la imagen */
+        }
+        .item-info {
+            text-align: center;
+            margin-top: 15px;
+        }
+        .item-info h2 {
+            font-size: 20px;
+            color: #333;
+            margin: 0;
+        }
+        .item-info p {
+            font-size: 16px;
+            color: #666;
+            margin: 5px 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            color: #ffffff;
+            background-color: #007bff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .footer {
+            text-align: center;
+            color: #888888;
+            font-size: 12px;
+            margin-top: 20px;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>¡Nueva Oportunidad en FreeMarket!</h1>
+        </div>
+
+        <div class="item">
+            <img src="{{imagenArticulo}}" alt="Imagen del Artículo">
+            <div class="item-info">
+                <h2>{{nombreArticulo}}</h2>
+                <p><strong>Categoría:</strong> {{categoriaArticulo}}</p>
+                <p><strong>Precio:</strong> {{precioArticulo}}</p>
+                <p><strong>Estado:</strong> {{estadoArticulo}}</p>
+                <a href="{{enlaceDetalles}}" class="button">Ver Más Detalles</a>
+            </div>
+        </div>
+
+        <p>Gracias por ser parte de nuestro marketplace. Si tienes alguna pregunta o necesitas ayuda, no dudes en ponerte en contacto con nuestro soporte.</p>
+        
+        <p>¡Estamos emocionados de ofrecerte las mejores ofertas y productos!</p>
+
+        <div class="footer">
+            <p>FreeMarket | Armenia, Quindío | 2991818 | freemarket@correo.com</p>
+            <p><a href="{{enlaceDesuscripcion}}" style="color: #007bff;">Cancelar suscripción</a></p>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- ARCHIVO JSON
+{
+    "subject":"¡Gracias por registrarse!",
+    "to":"vgmiguel16@gmail.com",
+    "dataTemplate": {
+        "nombreUsuario": "Miguel Vasquez",
+        "nombreArticulo": "Motocicleta",
+        "categoriaArticulo": "vehículos",
+        "precioArticulo": "3000.00",
+        "estadoArticulo": "En venta",
+        "imagenArticulo": "https://cdn.pixabay.com/photo/2016/04/07/06/53/bmw-1313343_1280.jpg",
+        "enlaceDetalles": "https://pixabay.com/es/photos/motocicleta-veh%C3%ADculo-bicicleta-8306765/"
+    },
+    "templateName": "marketplace.html"
+}
+
+const html = template({ 
+    nombreUsuario: dataTemplate.nombreUsuario, //le mando las variables del JSON(requestData) al HTML
+    nombreArticulo: dataTemplate.nombreArticulo,
+    categoriaArticulo: dataTemplate.categoriaArticulo,
+    precioArticulo: dataTemplate.precioArticulo,
+    estadoArticulo: dataTemplate.estadoArticulo,
+    imagenArticulo: dataTemplate.imagenArticulo,
+    enlaceDetalles: dataTemplate.enlaceDetalles
+});
+-->

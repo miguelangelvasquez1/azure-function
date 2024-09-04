@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Formulario</title>
+</head>
+<body>
+    <h2>Enviar Formulario por Correo</h2>
+    <form id="emailForm">
+        <label for="subject">Asunto:</label><br>
+        <input type="text" id="subject" name="subject" required><br><br>
+
+        <label for="templateName">Nombre de la Plantilla:</label><br>
+        <input type="text" id="templateName" name="templateName" required><br><br>
+
+        <label for="to">Correo Destinatario:</label><br>
+        <input type="email" id="to" name="to" required><br><br>
+
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="message">Mensaje:</label><br>
+        <textarea id="message" name="message"></textarea><br><br>
+
+        <button type="submit">Enviar</button>
+    </form>
+
+    <script>
+        document.getElementById('emailForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+
+            const formData = {
+                subject: document.getElementById('subject').value,
+                templateName: document.getElementById('templateName').value,
+                to: document.getElementById('to').value,
+                dataTemplate: {
+                    name: document.getElementById('name').value,
+                    message: document.getElementById('message').value
+                }
+            };
+
+            try {
+                const response = await fetch('<URL_DE_TU_AZURE_FUNCTION>', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(formData)
+                });
+
+                if (response.ok) {
+                    const result = await response.json();
+                    alert('Correo enviado exitosamente: ' + result.body);
+                } else {
+                    const error = await response.json();
+                    alert('Error al enviar correo: ' + error.body);
+                }
+            } catch (error) {
+                alert('Error de conexión: ' + error.message);
+            }
+        });
+    </script>
+</body>
+</html>

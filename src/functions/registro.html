@@ -1,6 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9edf0;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+            border-left: 5px solid #007bff;
+        }
+        h1 {
+            color: #2a3f54;
+        }
+        p {
+            color: #5d6d7e;
+        }
+        .account-info {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border: 1px solid #d1d1d1;
+        }
+        .account-info p {
+            margin: 8px 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            color: #ffffff;
+            background-color: #007bff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7a7a7a;
+            font-size: 12px;
+        }
+    </style>
+</head>
 <body>
-    <div>
-        <h1>Hola {{name}} Bienvenido a nuestra App</h1>
+    <div class="container">
+        <h1>¡Bienvenido a BancoAníbal, {{ name }}!</h1>
+        <p>Nos complace informarte que tu cuenta ha sido creada exitosamente. A continuación, te compartimos los detalles de tu cuenta:</p>
+
+        <div class="account-info">
+            <p><strong>Número de Cuenta:</strong> {{ cuenta }}</p>
+            <p><strong>Estado de Cuenta:</strong> {{ estadoCuenta }}</p>
+        </div>
+
+        <p>Estamos comprometidos a ofrecerte el mejor servicio posible. Recuerda que puedes acceder a tu cuenta en línea en cualquier momento para verificar tu estado de cuenta, realizar transacciones, y mucho más.</p>
+
+        <a href="[Enlace a la cuenta en línea]" class="button">Accede a tu cuenta</a>
+
+        <p>Gracias por confiar en BancoAníbal.</p>
+        <p>Saludos cordiales,<br>El equipo de BancoAníbal</p>
+
+        <div class="footer">
+            <p>BancoAníbal | Armenia, Quindío | 2991818</p>
+        </div>
     </div>
 </body>
-    
+</html>
+
+<!-- ARCHIVO JSON
+{
+    "subject":"¡Gracias por registrarse!",
+    "to":"vgmiguel16@gmail.com",
+    "dataTemplate": {
+        "name": "Miguel Vasquez",
+        "cuenta": "123456789",
+        "estadoCuenta": "Activo"
+    },
+    "templateName": "registro.html"
+}
+
+    const html = template({ 
+    name: dataTemplate.name, //le mando las variables del JSON(requestData) al HTML
+    cuenta: dataTemplate.cuenta,
+    estadoCuenta: dataTemplate.estadoCuenta
+});
+-->

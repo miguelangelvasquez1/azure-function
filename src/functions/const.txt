@@ -1,0 +1,2 @@
+const connectionString ="endpoint=https://emails-adso-192.unitedstates.communication.azure.com/;accesskey=GAb2fQ4gL40IxaCd71vqzemUKJ3B4qQzYcgjGeFkT5SZdwA4oSShJQQJ99AHACULyCps5mg0AAAAAZCSDFZt";
+const senderAddress = "DoNotReply@20a7a68d-6cd3-4e4c-8045-b8a646fd8f7a.azurecomm.net";

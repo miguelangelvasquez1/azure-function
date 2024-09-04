@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+            border: 2px solid #f2b5d4;
+        }
+        h1 {
+            color: #e94e77;
+            text-align: center;
+        }
+        p {
+            color: #555555;
+            line-height: 1.6;
+        }
+        .pet-info {
+            background-color: #fceff8;
+            padding: 15px;
+            border-radius: 8px;
+            border: 1px solid #f7b2b7;
+            margin: 20px 0;
+        }
+        .pet-info p {
+            margin: 5px 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 20px;
+            color: #ffffff;
+            background-color: #e94e77;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 20px;
+            display: block;
+            width: fit-content;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #888888;
+            font-size: 12px;
+        }
+        .footer p {
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Hola {{nombrePropietario}}!</h1>
+        <p>Gracias por confiar en nosotros para el cuidado de tu querida mascota. Nos alegra confirmarte que hemos agendado la siguiente cita:</p>
+
+        <div class="pet-info">
+            <p><strong>Nombre de la Mascota:</strong> {{nombreMascota}}</p>
+            <p><strong>Especie:</strong> {{especieMascota}}</p>
+            <p><strong>Fecha de la Cita:</strong> {{fechaCita}}</p>
+            <p><strong>Hora de la Cita:</strong> {{horaCita}}</p>
+        </div>
+
+        <p>Por favor, trae cualquier documentación médica relevante y asegúrate de llegar unos minutos antes de la cita para evitar retrasos.</p>
+        
+        <a href="[Enlace a más información]" class="button">Más Detalles</a>
+
+        <p>Estamos aquí para ofrecer el mejor cuidado posible para tu mascota. No dudes en contactarnos si tienes alguna pregunta o necesitas reprogramar la cita.</p>
+        
+        <p>Saludos afectuosos,<br>El equipo de Clínica Veterinaria Huellitas</p>
+
+        <div class="footer">
+            <p>Clínica Veterinaria Huellitas</p>
+            <p>Armenia, Quindío | 2991818 | huellitas@correo.com</p>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- ARCHIVO JSON
+{
+    "subject":"¡Gracias por registrarse!",
+    "to":"vgmiguel16@gmail.com",
+    "dataTemplate": {
+        "nombrePropietario": "Miguel Vasquez",
+        "nombreMascota": "Gody",
+        "especieMascota": "perro",
+        "fechaCita": "4/09/2024",
+        "horaCita": "14:00"
+    },
+    "templateName": "veterinaria.html"
+}
+
+const html = template({ 
+    nombrePropietario: dataTemplate.nombrePropietario, //le mando las variables del JSON(requestData) al HTML
+    nombreMascota: dataTemplate.nombreMascota,
+    especieMascota: dataTemplate.especieMascota,
+    fechaCita: dataTemplate.fechaCita,
+    horaCita: dataTemplate.horaCita
+});
+-->
