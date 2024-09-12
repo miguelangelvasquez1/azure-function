@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Compra</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #e9edf0;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            background-color: #ffffff;
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: auto;
+            border-left: 5px solid #007bff;
+        }
+        h1 {
+            color: #2a3f54;
+        }
+        p {
+            color: #5d6d7e;
+        }
+        .product-info {
+            background-color: #f8f9fa;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 20px 0;
+            border: 1px solid #d1d1d1;
+        }
+        .product-info p {
+            margin: 8px 0;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            color: #ffffff;
+            background-color: #007bff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            color: #7a7a7a;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Gracias por tu compra, {{ name }}!</h1>
+        <p>Tu pedido ha sido recibido con éxito. A continuación, te compartimos los detalles de tu compra:</p>
+
+        <div class="product-info">
+            <p><strong>Nombre del Producto:</strong> {{ producto }}</p>
+            <p><strong>Descripción:</strong> {{ descripcion }}</p>
+            <p><strong>Cantidad:</strong> {{ cantidad }}</p>
+            <p><strong>Precio Total:</strong> ${{ precio }}</p>
+        </div>
+
+        <p>Si tienes alguna pregunta sobre tu pedido, no dudes en contactarnos.</p>
+        <p>Gracias por elegirnos.</p>
+        <p>Saludos cordiales,<br>El equipo de [Nombre de la Empresa]</p>
+
+        <div class="footer">
+            <p>[Nombre de la Empresa] | Dirección | Teléfono</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -17,13 +17,11 @@ const templatePath = path.join(__dirname, templateName);
 const source = fs.readFileSync(templatePath, 'utf-8');
 const template = Handlebars.compile(source);
 const html = template({ 
-    nombreUsuario: dataTemplate.nombreUsuario, //le mando las variables del JSON(requestData) al HTML
-    nombreArticulo: dataTemplate.nombreArticulo,
-    categoriaArticulo: dataTemplate.categoriaArticulo,
-    precioArticulo: dataTemplate.precioArticulo,
-    estadoArticulo: dataTemplate.estadoArticulo,
-    imagenArticulo: dataTemplate.imagenArticulo,
-    enlaceDetalles: dataTemplate.enlaceDetalles
+    name: dataTemplate.name, //le mando las variables del JSON(requestData) al HTML
+    producto: dataTemplate.prodcuto,
+    descripcion: dataTemplate.descripcion,
+    cantidad: dataTemplate.cantidad,
+    precio: dataTemplate.precio
 });
 const emailMessage = {
 senderAddress: "DoNotReply@20a7a68d-6cd3-4e4c-8045-b8a646fd8f7a.azurecomm.net",
