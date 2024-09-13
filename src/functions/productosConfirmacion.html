@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Registro</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            background: #ffffff;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .header {
+            background: #007bff;
+            color: #ffffff;
+            padding: 20px;
+            text-align: center;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+        .content p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #333333;
+        }
+        .button {
+            display: inline-block;
+            font-size: 16px;
+            color: #ffffff;
+            background-color: #28a745;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .footer {
+            background: #f1f1f1;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+            color: #777777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>¡Gracias por registrarte!</h1>
+        </div>
+        <div class="content">
+            <p>Hola {{ correo }},</p>
+            <p>Gracias por registrarte en nuestra tienda. Estamos emocionados de tenerte con nosotros. Tu cuenta ha sido creada con éxito y ahora puedes comenzar a explorar nuestros productos.</p>
+            <p>Para comenzar a comprar, por favor haz clic en el botón de abajo para ir a nuestra tienda.</p>
+            <a href="[URL de la tienda]" class="button">Ir a la tienda</a>
+        </div>
+        <div class="footer">
+            <p>&copy; 2024 Tu Tienda. Todos los derechos reservados.</p>
+            <p>Si tienes alguna pregunta, no dudes en <a href="mailto:soporte@tutienda.com">contactarnos</a>.</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -18,10 +18,11 @@ const source = fs.readFileSync(templatePath, 'utf-8');
 const template = Handlebars.compile(source);
 const html = template({ 
     name: dataTemplate.name, //le mando las variables del JSON(requestData) al HTML
-    producto: dataTemplate.prodcuto,
+    producto: dataTemplate.producto,
     descripcion: dataTemplate.descripcion,
     cantidad: dataTemplate.cantidad,
-    precio: dataTemplate.precio
+    precio: dataTemplate.precio,
+    correo: dataTemplate.correo
 });
 const emailMessage = {
 senderAddress: "DoNotReply@20a7a68d-6cd3-4e4c-8045-b8a646fd8f7a.azurecomm.net",
