@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Confirmación de Registro - DeviceControl</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #1e69ac;
+            text-align: center;
+        }
+        p {
+            font-size: 16px;
+            color: #333;
+        }
+        .footer {
+            margin-top: 20px;
+            text-align: center;
+            font-size: 14px;
+            color: #777;
+        }
+        .highlight {
+            color: #1e69ac;
+            font-weight: bold;
+        }
+        .button {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #40a1dc;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+            margin-top: 20px;
+            width: auto;
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+        }
+        .button:hover {
+            background-color: #1e69ac;
+        }
+        .info {
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+            color: #333;
+        }
+        .role {
+            font-weight: bold;
+            color: #1e69ac;
+            margin-left: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¡Bienvenido a DeviceControl!</h1>
+        <p>Hola, <span class="highlight">{{nombre}}</span>.</p>
+        <div class="info">
+            <p>Gracias por registrarte en nuestra plataforma. Tu cuenta ha sido creada exitosamente con el siguiente rol:</p>
+            <p class="role">{{role}}</p>
+        </div>
+        <p>Te invitamos a comenzar a explorar y gestionar los dispositivos asociados a tu cuenta. Si necesitas asistencia, no dudes en ponerte en contacto con nuestro soporte.</p>
+        <p>¡Estamos felices de tenerte con nosotros!</p>
+        <a href="https://www.devicecontrol.com/login" class="button">Acceder a tu cuenta</a>
+        <div class="footer">
+            <p>&copy; 2025 DeviceControl, Todos los derechos reservados.</p>
+        </div>
+    </div>
+</body>
+</html>
