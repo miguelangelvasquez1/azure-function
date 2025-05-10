@@ -12,8 +12,8 @@ const client = new EmailClient(connectionString);
 
 const templateAttributes = {
     "confirmationTemplate.html": ["nombre", "role"], //Deben ser los mismos en el html y en el json
-    "template_password_reset": ["username", "resetLink"], // Atributos para la plantilla de restablecimiento de contraseña
-    "mindLinkConfirmation.html": ["nombre", "intereses"],
+    "passwordResetDC.html": ["username", "resetCode"], // Atributos para la plantilla de restablecimiento de contraseña
+    "mindLinkConfirmationTemplate.html": ["nombre", "intereses"],
 };
 
 app.http('httpTrigger1', {

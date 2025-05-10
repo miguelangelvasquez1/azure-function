@@ -2,6 +2,7 @@ const connectionString ="endpoint=https://emails-adso-192.unitedstates.communica
 const senderAddress = "DoNotReply@20a7a68d-6cd3-4e4c-8045-b8a646fd8f7a.azurecomm.net";
 
 <!-- ARCHIVO JSON
+--> Registro DC:
 {
     "subject":"¡Gracias por registrarse!",
     "to":"vgmiguel16@gmail.com",
@@ -10,6 +11,28 @@ const senderAddress = "DoNotReply@20a7a68d-6cd3-4e4c-8045-b8a646fd8f7a.azurecomm
         "rol": "Instructor"
     },
     "templateName": "confirmationTemplate.html"
+}
+
+--> PasswordReset DC:
+{
+  "subject": "Cambio de contraseña",
+  "templateName": "passwordResetDC.html",
+  "dataTemplate": {
+    "username": "Juan Pérez",
+    "resetCode": "123456"
+  },
+  "to": "vgmiguel16@gmail.com"
+}
+
+--> Register MindLink
+{
+  "subject": "Welcome to MindLink",
+  "templateName": "mindLinkConfirmationTemplate.html",
+  "dataTemplate": {
+    "nombre": "Juan Pérez",
+    "intereses": ["Matemáticas", "Física", "Programación"]
+  },
+  "to": "vgmiguel16@gmail.com"
 }
 
 link deploy: https://function-192-adso.azurewebsites.net/api/httptrigger1

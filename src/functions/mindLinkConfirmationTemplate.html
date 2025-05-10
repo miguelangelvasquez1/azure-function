@@ -1,65 +1,113 @@
 <!-- template_student_interests.html -->
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Intereses del Estudiante</title>
+    <title>Student Interests</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
-            background-color: #f7f7f7;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1a1a2e;
             margin: 0;
             padding: 0;
+            color: #ffffff;
         }
         .container {
             width: 100%;
             max-width: 600px;
-            margin: 20px auto;
-            background-color: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            margin: 40px auto;
+            background-color: #2f2f4f;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+        }
+        .logo {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .logo img {
+            max-width: 120px;
+            height: auto;
         }
         h1 {
-            color: #4CAF50;
-            font-size: 24px;
+            font-size: 26px;
             text-align: center;
+            color: #a97cfa;
+            margin-bottom: 20px;
         }
         .student-info {
             font-size: 16px;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
+            line-height: 1.6;
+            color: #ddddff;
+            text-align: center;
         }
         .interests-list {
-            padding-left: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            padding: 0;
+            list-style: none;
+            justify-content: center;
         }
         .interests-list li {
-            font-size: 16px;
-            color: #333333;
-            margin: 5px 0;
+            background: linear-gradient(145deg, #5c32c0, #443ab7);
+            padding: 10px 18px;
+            border-radius: 25px;
+            font-size: 14px;
+            color: #ffffff;
+            font-weight: bold;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+        }
+        .cta-button {
+            display: block;
+            width: fit-content;
+            margin: 30px auto 10px auto;
+            padding: 12px 24px;
+            background-color: #7c4dff;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+        }
+        .cta-button:hover {
+            background-color: #9e70ff;
         }
         footer {
             text-align: center;
             font-size: 12px;
-            color: #888888;
+            color: #aaaaaa;
             margin-top: 30px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>¡Hola {{nombre}}!</h1>
-        <div class="student-info">
-            <p>Nos alegra tenerte en MindLink, la plataforma educativa que conecta a estudiantes con contenidos interesantes.</p>
-            <p>A continuación, te mostramos algunos de tus intereses:</p>
+        <!-- Optional Logo -->
+        <div class="logo">
+            <img src="https://i.postimg.cc/1XFGbjYn/icons8-centro-de-estudiantes-90.png" alt="MindLink Logo">
         </div>
+
+        <h1>Hello {{nombre}}!</h1>
+
+        <div class="student-info">
+            <p>We’re excited to have you at <strong>MindLink</strong>, the educational platform that connects students with engaging content.</p>
+            <p>Here are some of the topics you’re interested in:</p>
+        </div>
+
         <ul class="interests-list">
             {{#each intereses}}
                 <li>{{this}}</li>
             {{/each}}
         </ul>
+
+        <!-- Call to Action Button -->
+        <a class="cta-button" href="https://www.mayoclinic.org/es/healthy-lifestyle/weight-loss/in-depth/weight-loss/art-20047752" target="_blank">Explore Now</a>
+
         <footer>
-            <p>Gracias por ser parte de MindLink. ¡Esperamos que disfrutes de los contenidos!</p>
+            <p>Thank you for being part of MindLink. We hope you enjoy the content!</p>
         </footer>
     </div>
 </body>
