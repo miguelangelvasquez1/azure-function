@@ -5,7 +5,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Cadena de conexión para Azure Communication Email
-const connectionString = "endpoint=https://emails-adso-192.unitedstates.communication.azure.com/;accesskey=GAb2fQ4gL40IxaCd71vqzemUKJ3B4qQzYcgjGeFkT5SZdwA4oSShJQQJ99AHACULyCps5mg0AAAAAZCSDFZt";
+const connectionString = "endpoint=https://emails-adso-2825192s.unitedstates.communication.azure.com/;accesskey=DwpbLbRv4SZ1osp2mXeZK0GmOOt3wT9RKAqplDcN7pithl3GMQtKJQQJ99AHACULyCps5mg0AAAAAZCSBd1B";
 
 // Crear cliente de correo utilizando la cadena de conexión
 const client = new EmailClient(connectionString);
@@ -48,7 +48,7 @@ app.http('httpTrigger1', {
 
         // Configurar el mensaje de correo
         const emailMessage = {
-            senderAddress: "DoNotReply@20a7a68d-6cd3-4e4c-8045-b8a646fd8f7a.azurecomm.net",
+            senderAddress: "DoNotReply@79f1d219-803a-421b-b26f-fc539010b425.azurecomm.net",
             content: {
                 subject: subject,
                 html: html,
